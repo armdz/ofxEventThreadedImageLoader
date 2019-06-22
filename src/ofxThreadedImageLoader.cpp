@@ -99,6 +99,8 @@ void ofxThreadedImageLoader::update(ofEventArgs & a){
 	if (images_to_update.tryReceive(entry)) {
 		entry.image->setUseTexture(true);
 		entry.image->update();
+        dispatch_event(true,"");
+
 	}
 }
 
